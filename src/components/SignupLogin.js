@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./SignupLogin.css";
 import SignupPage from "./SignupPage";
 import LoginPage from "./LoginPage";

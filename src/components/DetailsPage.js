@@ -15,7 +15,7 @@ const DetailsPage = () => {
   };
   useEffect(() => {
     fetchId();
-  }, [id]);
+  }, []);
 
   return (
     <div className="detailCon">
