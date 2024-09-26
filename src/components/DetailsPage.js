@@ -6,16 +6,17 @@ const DetailsPage = () => {
   const [data, setData] = useState({});
   const { id } = useParams();
   console.log(id);
-  const fetchId = async () => {
-    const res = await axios.get(
-      `https://jsonplaceholder.typicode.com/posts/${id}`
-    );
-    setData(res.data);
-    console.log(res.data);
-  };
   useEffect(() => {
+    const fetchId = async () => {
+      const res = await axios.get(
+        `https://jsonplaceholder.typicode.com/posts/${id}`
+      );
+      setData(res.data);
+      console.log(res.data);
+    };
+
     fetchId();
-  }, []);
+  }, [id]);
 
   return (
     <div className="detailCon">
